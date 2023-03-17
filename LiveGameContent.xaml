@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="NBAInformer.LiveGameContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NBAInformer"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="200">
+    <Grid>
+        <Button Height="100" Width="200" Style="{StaticResource ButtonLiveGameStyle}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" x:Name="LogoLeft"/>
+                <Grid Grid.Column="1" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" x:Name="GameStartTime" Style="{StaticResource ButtonLiveGameTextStyle}" FontSize="16"></TextBlock>
+                    <TextBlock Grid.Row="1" x:Name="GameStatus" Style="{StaticResource ButtonLiveGameTextStyle}" FontSize="10"></TextBlock>
+                    <TextBlock Grid.Row="2" x:Name="GameScore" Style="{StaticResource ButtonLiveGameTextStyle}" FontWeight="Bold"></TextBlock>
+                </Grid>
+                <Image Grid.Column="2" x:Name="LogoRight"/>
+            </Grid>
+        </Button>
+    </Grid>
+</UserControl>
